@@ -1,0 +1,14 @@
+Information About Code
+1. The implementation of the extension to Metropolis Algorithm for improved decryption is done in mcmc_decrypt_text_modified.m
+2. To run this code, for frank case simply do
+pr_trans = compute_transition_probability(training_txt);
+[decrypted_txt,decrypt_key] = mcmc_decrypt_text_modified(frank_encrypted_txt,pr_trans);
+where the training_txt is the one given in sem1_2018_encrypt.mat
+
+3. To decrypt the mystery text using the modified algorithm, do
+load('new_training_txt.mat');
+pr_trans_2 = compute_transition_probability(new_training_txt);
+[decrypted_txt,decrypt_key] = mcmc_decrypt_text_modified(mystery_encrypted_txt,pr_trans_2);
+
+4. The file code3731c.m contains codes that are used to print outputs that are requested in the project document. Note that these commands
+could also be run in the command line instead
